@@ -17,6 +17,10 @@ This project is a chatbot application that allows users to ask dynamic questions
 - Store user sessions and answers in a MongoDB database.
 - An interactive chat experience with a user-friendly interface.
 
+## Screen Shots
+![image](https://github.com/user-attachments/assets/c8542a53-df85-41aa-ac0f-930842b1d34a)
+
+
 ## Installation
 
 ### Requirements
