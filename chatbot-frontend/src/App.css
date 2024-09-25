@@ -1,0 +1,117 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e; /* Arka planı tam ekran ile uyumlu yap */
+}
+
+/* container, alt alta yerleşim için kullanılacak */
+.container {
+  display: block; /* Flex yerine block yaparak alt alta sıralanmasını sağla */
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Yükseklik %100 olacak şekilde ayarlanır */
+  width: 100%; /* Genişlik %100 olacak şekilde ayarlanır */
+}
+
+/* chat-header, sohbet başlığı için stil */
+.chat-header {
+  width: 100%; /* Tam genişlik */
+  background-color: #211e4e; /* Header arka plan rengi */
+  color: white; /* Yazı rengi */
+  padding: 5px; /* İçerik için boşluk */
+  padding-left: 20px; /* Sol boşluk */
+  font-size: 10px; /* Font boyutu */
+  border-radius: 10px 10px 0 0; /* Sadece üst köşeleri yuvarla */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+  position: relative; /* Diğer elementlerle ilişki kurabilmek için */
+  z-index: 1; /* Diğer elementlerin üstünde kalması için */
+}
+
+/* chat-container, tam ekran yüksekliği ve ortalama */
+.chat-container {
+  display: flex;
+  flex-direction: column; /* Dikey yönde düzenleme */
+  width: 80%; /* Genişlik ayarını buradan düzenle */
+  height: calc(100vh - 60px); /* Header yüksekliğini çıkararak yüksekliği ayarla */
+  margin: 0 auto; /* Ortalamak için otomatik margin */
+  background-color: #2c2c2c; /* Konteynerin arka plan rengi */
+  color: #f5f5f5; /* Genel yazı rengi */
+  border-radius: 10px; /* Hafif köşeleri yuvarla */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+  overflow: hidden; /* İçerik taşarsa gizle */
+}
+/* message-list, mesajların olduğu alan */
+.message-list {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto; /* Kaydırma */
+  background-color: #2c2c2c; /* Mesaj alanı için koyu arka plan */
+  display: flex;
+  flex-direction: column; /* Mesajları yukarıdan aşağı sıralamak için değiştirildi */
+}
+
+/* message, her bir mesajın temel stili */
+.message {
+  max-width: 60%;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+/* Bot mesajları için stil */
+.message.bot {
+  background-color: #3a3a3a; /* Bot mesajları için daha koyu arka plan rengi */
+  color: #f0f0f0; /* Bot mesajı metin rengi */
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+/* Kullanıcı mesajları için stil */
+.message.user {
+  background-color: #00897b; /* Kullanıcı mesajı için arka plan */
+  color: white;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* Input formunun stili */
+.input-form {
+  display: flex;
+  padding: 10px;
+  background-color: #1e1e1e; /* Form alanı için koyu arka plan rengi */
+  border-top: 1px solid #3c3c3c; /* Üstüne çizgi */
+}
+
+/* Input alanı stili */
+.input-form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #555;
+  border-radius: 20px;
+  outline: none;
+  background-color: #2c2c2c; /* Giriş alanı arka plan rengi */
+  color: #f5f5f5; /* Giriş alanı metin rengi */
+}
+
+/* Gönder butonu stili */
+.input-form button {
+  margin-left: 10px;
+  padding: 0 20px;
+  font-size: 16px;
+  background-color: #211e4e; /* Gönder butonu arka plan rengi */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Sohbetin sonu için stil */
+.chat-end {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e1e; /* Sohbet sonu arka plan rengi */
+  color: #f5f5f5; /* Sohbet sonu metin rengi */
+}
