@@ -102,6 +102,3 @@ cd chatbot
 
 If you would like to contribute, please create a pull request or report any issues.
 
-## License
-
-This project is licensed under the MIT License.
